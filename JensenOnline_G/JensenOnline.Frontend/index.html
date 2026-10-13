@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JENSENOnline</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>JENSENOnline</h1>
+
+    <section id="auth">
+        <h2>Registrering</h2>
+        <input id="registerUsername" type="text" placeholder="Användarnamn">
+        <input id="registerPassword" type="password" placeholder="Lösenord">
+        <button onclick="register()">Registrera</button>
+
+        <h2>Login</h2>
+        <input id="loginUsername" type="text" placeholder="Användarnamn">
+        <input id="loginPassword" type="password" placeholder="Lösenord">
+        <button onclick="login()">Logga in</button>
+        <p id="message"></p>
+    </section>
+
+    <section id="loggedIn" style="display:none;">
+        <button onclick="logout()">Logga ut</button>
+
+        <h2>Produkter</h2>
+        <input id="search" type="text" placeholder="Sök produkt">
+        <button onclick="getProducts()">Sök</button>
+        <div id="products"></div>
+
+        <h2>Mina orders</h2>
+        <button onclick="getMyOrders()">Visa mina orders</button>
+        <div id="orders"></div>
+    </section>
+
+    <section id="admin" style="display:none;">
+        <h2>Admin</h2>
+
+        <h3>Skapa produkt</h3>
+        <input id="productName" type="text" placeholder="Produktnamn">
+        <input id="productPrice" type="number" placeholder="Pris">
+        <input id="productDescription" type="text" placeholder="Beskrivning">
+        <button onclick="createProduct()">Skapa produkt</button>
+
+        <h3>Alla orders</h3>
+        <button onclick="getAllOrders()">Visa alla orders</button>
+        <div id="allOrders"></div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
